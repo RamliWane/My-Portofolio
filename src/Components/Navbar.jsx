@@ -8,22 +8,22 @@ export default function Navbar() {
 
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <li>
-            <Link href="/" className="hover:text-purple-700 transition font-semibold">
+            <Link href="/" className="hover:text-amber-900 transition font-semibold">
               Home
             </Link>
           </li>
           <li>
-            <Link href="#about" className="hover:text-purple-700 transition font-semibold">
+            <Link href="#about" className="hover:text-amber-900 transition font-semibold">
               About
             </Link>
           </li>
           <li>
-            <Link href="#skills" className="hover:text-purple-700 transition font-semibold">
+            <Link href="#skills" className="hover:text-amber-900 transition font-semibold">
               Skills
             </Link>
           </li>
           <li>
-            <Link href="#contact" className="hover:text-purple-700 transition font-semibold">
+            <Link href="#contact" className="hover:text-amber-900 transition font-semibold">
               Contact
             </Link>
           </li>
