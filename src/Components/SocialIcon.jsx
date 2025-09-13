@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SocialIcon() {
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 mt-5">
         <div className="flex flex-col justify-start">
             <h1 className="text-2xl font-bold text-black mt-5">Contact me</h1>
             <div className="flex gap-3 mt-5">
