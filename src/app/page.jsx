@@ -1,7 +1,10 @@
+import React from "react";
+import FirstPage from "../Components/FirstPage";
+
 export default function Home() {
   return (
     <main>
-      <h1 className="text-3xl font-bold underline text-black">Welcome to My Portfolio</h1>
+      <FirstPage></FirstPage>
     </main>
   );
 }
