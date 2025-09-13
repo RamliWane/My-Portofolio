@@ -5,8 +5,8 @@ export default function FirstPage() {
   return (
   <div className="flex items-center justify-center px-8">
       <div className="flex flex-col md:flex-row mt-20 gap-12">
-        <div className="flex flex-col gap-4 md:w-1/2 ml-4">
-          <h3 className="text-2xl font-bold text-black">Welcome to My kisah</h3>
+        <div className="flex flex-col gap-4 md:w-1/2 ml-4 lg:mt-15 lg:gap-7">
+          <h3 className="text-3xl font-bold text-black">Welcome to Portofolio</h3>
           <h1 className="text-4xl font-bold text-black">Hi, I’m{" "}<span className="text-amber-900">Ramli Silawane A <br />Beginner Coder.</span></h1>
           <p className="text-black text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam</p>
             <div>
@@ -19,7 +19,7 @@ export default function FirstPage() {
         </div>
 
         <div className="flex justify-center md:w-1/2 pl-10 z-1">
-          <img className="w-80 -ml-7 h-auto md:w-96 md:h-80 lg:w-96 lg:h-80" src="./RectangleSementara.png" alt="globe" />
+          <img className="w-80 -ml-7 h-auto md:w-96 md:h-80 lg:w-96 lg:h-80 lg:mt-12" src="./RectangleSementara.png" alt="globe" />
         </div>
 
       </div>
