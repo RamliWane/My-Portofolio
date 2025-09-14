@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Button from "../Components/Button";
+import Portofolio from "../Components/Portofolio";
 
-export default function PageThree() {
+export default function PageFour() {
     const [isVisible, setIsVisible] = useState(false);
     const pageRef = useRef(null);
 
@@ -71,22 +71,11 @@ export default function PageThree() {
                 @keyframes scaleIn {
                     from {
                         opacity: 0;
-                        transform: scale(0.8);
+                        transform: scale(0.9);
                     }
                     to {
                         opacity: 1;
                         transform: scale(1);
-                    }
-                }
-
-                @keyframes slideInContainer {
-                    from {
-                        opacity: 0;
-                        transform: translateY(40px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
                     }
                 }
 
@@ -109,35 +98,26 @@ export default function PageThree() {
                     animation: scaleIn 0.8s ease-out forwards;
                     opacity: 0;
                 }
-
-                .animate-slide-container {
-                    animation: slideInContainer 0.8s ease-out forwards;
-                    opacity: 0;
-                }
                 
                 .delay-100 { animation-delay: 0.1s; }
                 .delay-200 { animation-delay: 0.2s; }
                 .delay-300 { animation-delay: 0.3s; }
                 .delay-400 { animation-delay: 0.4s; }
-                .delay-500 { animation-delay: 0.5s; }
-                .delay-600 { animation-delay: 0.6s; }
             `}</style>
             
-            <div ref={pageRef} className="flex items-center justify-center px-8 mt-10">
-                <div className={`flex justify-center bg-white h-240 md:h-120 md:w-full lg:h-130 rounded-2xl flex-col md:flex-row mt-20 ${isVisible ? 'animate-slide-container delay-100' : ''}`}>
-                        <div className={`flex justify-center md:w-100 md:-ml-10 md:mr-5 md:mt-10 pl-10 z-1 -mt-5 ${isVisible ? 'animate-scale-in delay-300' : ''}`}>
-                            <img className="w-100 -ml-10 h-auto md:w-96 md:h-80 lg:ml-20 lg:h-100 lg:w-200 lg:mt-5 md:ml-5" src="./Ellipse 40.png" alt="globe" />
-                        </div>
-                        <div className="flex flex-col gap-4 lg:ml-40 md:w-1/2 mt-20 ml-5 lg:mt-25">
-                            <p className={`text-xl font-mono text-black ${isVisible ? 'animate-fade-right delay-400' : ''}`}>all the projects I have worked on</p>
-                            <h1 className={`text-4xl -mt-4 underline font-bold text-black ${isVisible ? 'animate-fade-right delay-500' : ''}`}>About Me</h1>
-                            <p className={`text-black text-2xl leading-8 md:text-xl ${isVisible ? 'animate-fade-up delay-600' : ''}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <br /> dolore magna aliqua.Ut enim ad minim veniam</p>
-                            <div className={`self-start mt-4 ${isVisible ? 'animate-fade-up delay-700' : ''}`}>
-                                <Button />
-                            </div>                    
-                        </div>
+            <div ref={pageRef}>
+                <div className="flex flex-col items-start justify-start px-8 lg:ml-26 md:mt-35 md:ml-5">
+                    <p className={`text-xl font-mono text-black ${isVisible ? 'animate-fade-left delay-100' : ''}`}>
+                        all the projects I have worked on
+                    </p>
+                    <h1 className={`text-3xl underline font-bold text-black ${isVisible ? 'animate-fade-left delay-200' : ''}`}>
+                        Portofolio
+                    </h1>
                 </div>
-             </div>
+                <div className={`flex justify-center ${isVisible ? 'animate-scale-in delay-300' : ''}`}>
+                    <Portofolio></Portofolio>
+                </div>
+            </div>
         </>
     );
 }

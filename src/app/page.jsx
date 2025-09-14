@@ -2,6 +2,7 @@ import React from "react";
 import FirstPage from "../Page/FirstPage";
 import PageTwo from "@/Page/PageTwo";
 import PageThree from "@/Page/PageThree";
+import PageFour from "@/Page/PageFour";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <FirstPage></FirstPage>
         <PageTwo></PageTwo>
         <PageThree></PageThree>
+        <PageFour></PageFour>
     </main>
   );
 }
