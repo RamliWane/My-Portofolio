@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Portofolio from "../Components/Portofolio";
+import PortofolioApp from "@/Components/PortofolioApp";
+import PortofolioUI from "@/Components/PortofolioUI";
+import PortofolioWeb from "@/Components/PortofolioWeb";
 
 export default function PageFour() {
     const [isVisible, setIsVisible] = useState(false);
@@ -114,8 +116,25 @@ export default function PageFour() {
                         Portofolio
                     </h1>
                 </div>
-                <div className={`flex justify-center ${isVisible ? 'animate-scale-in delay-300' : ''}`}>
-                    <Portofolio></Portofolio>
+                <div className={`flex justify-center gap-5 flex-wrap`}>
+                    <div className={`${isVisible ? 'animate-scale-in delay-100' : ''}`}>
+                        <PortofolioUI></PortofolioUI>
+                    </div>
+                    <div className={`${isVisible ? 'animate-scale-in delay-200' : ''}`}>
+                        <PortofolioWeb></PortofolioWeb>
+                    </div>
+                    <div className={`${isVisible ? 'animate-scale-in delay-300' : ''}`}>
+                        <PortofolioApp></PortofolioApp>                
+                    </div>
+                    <div className={`${isVisible ? 'animate-scale-in delay-100' : ''}`}>
+                        <PortofolioUI></PortofolioUI>
+                    </div>
+                    <div className={`${isVisible ? 'animate-scale-in delay-200' : ''}`}>
+                        <PortofolioWeb></PortofolioWeb>
+                    </div>
+                    <div className={`${isVisible ? 'animate-scale-in delay-300' : ''}`}>
+                        <PortofolioApp></PortofolioApp>                
+                    </div>
                 </div>
             </div>
         </>
