@@ -6,7 +6,7 @@ import PageFour from "@/Page/PageFour";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-y-auto overflow-x-hidden">
         <FirstPage></FirstPage>
         <PageTwo></PageTwo>
         <PageThree></PageThree>

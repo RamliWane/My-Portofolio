@@ -106,7 +106,7 @@ export default function PageTwo() {
       `}</style>
       
       <div ref={pageRef} className="flex">
-        <div className="flex flex-wrap justify-center mt-15">
+        <div className="flex flex-wrap justify-center mt-15 mb-20">
           <div className="flex flex-col justify-center items-center px-8 mb-20 lg:mt-32 lg:ml-14 lg:mr-10 md:mt-20 md:ml-5">
             <h1 className={`text-3xl underline font-bold text-black ${isVisible ? 'animate-fade-left delay-200' : ''}`}>
               My Works

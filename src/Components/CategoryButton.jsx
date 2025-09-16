@@ -1,7 +1,7 @@
 import React from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
 
-export default function CategoryButton({ animation = "fadeInUp", delay = 0 }) {
+export default function CategoryButton({ animation = "fade-up", delay = 0 }) {
     return (
         <AnimatedWrapper animation={animation} delay={delay}>
             <div className="flex justify-center">

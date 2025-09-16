@@ -122,7 +122,7 @@ export default function PageThree() {
                 .delay-500 { animation-delay: 0.5s; }
                 .delay-600 { animation-delay: 0.6s; }
             `}</style>
-                <div ref={pageRef} className="flex items-center justify-center px-8 mt-10">
+                <div ref={pageRef} className="flex items-center justify-center flex-wrap px-8 mt-10 mb-30">
                             <div className={`flex justify-center md:w-100 md:-ml-10 md:mr-5 md:mt-10 pl-10 z-1 -mt-5 ${isVisible ? 'animate-scale-in delay-300' : ''}`}>
                                 <img className="w-100 -ml-10 h-auto md:w-96 md:h-80 lg:ml-20 lg:h-100 lg:w-200 lg:mt-5 md:ml-5" src="./Ellipse 40.png" alt="globe" />
                             </div>

@@ -28,7 +28,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={kanit.variable}>
       <body className="bg-gray-50 text-gray-900">
-        <Navbar></Navbar>
+        <div className="mt-10">
+          <Navbar></Navbar>
+        </div>
         <main className="container mx-auto">{children}</main>
       </body>
     </html>
