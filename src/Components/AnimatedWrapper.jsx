@@ -1,39 +1,49 @@
-"use client";
 import React, { useState, useEffect, useRef } from "react";
-import PortofolioApp from "@/Components/PortofolioApp";
-import PortofolioUI from "@/Components/PortofolioUI";
-import PortofolioWeb from "@/Components/PortofolioWeb";
-import CategoryButton from "@/Components/CategoryButton";
 
-export default function PageFour() {
+// Animated Wrapper Component
+export default function AnimatedWrapper({ 
+    children, 
+    animation = "fadeInUp", 
+    delay = 0, 
+    threshold = 0.3,
+    rootMargin = "0px 0px -50px 0px",
+    className = ""
+}) {
     const [isVisible, setIsVisible] = useState(false);
-    const pageRef = useRef(null);
+    const elementRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                // Animasi trigger saat element 30% masuk viewport
-                if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+                if (entry.isIntersecting && entry.intersectionRatio >= threshold) {
                     setIsVisible(true);
                 }
             },
             {
-                threshold: 0.3, // Trigger saat 30% element terlihat
-                rootMargin: '0px 0px -50px 0px' // Sedikit delay agar animasi lebih smooth
+                threshold: threshold,
+                rootMargin: rootMargin
             }
         );
 
-        if (pageRef.current) {
-            observer.observe(pageRef.current);
+        if (elementRef.current) {
+            observer.observe(elementRef.current);
         }
 
-        // Cleanup observer
         return () => {
-            if (pageRef.current) {
-                observer.unobserve(pageRef.current);
+            if (elementRef.current) {
+                observer.unobserve(elementRef.current);
             }
         };
-    }, []);
+    }, [threshold, rootMargin]);
+
+    const getDelayClass = (delayTime) => {
+        if (delayTime === 100) return 'delay-100';
+        if (delayTime === 200) return 'delay-200';
+        if (delayTime === 300) return 'delay-300';
+        if (delayTime === 400) return 'delay-400';
+        if (delayTime === 500) return 'delay-500';
+        return '';
+    };
 
     return (
         <>
@@ -42,6 +52,17 @@ export default function PageFour() {
                     from {
                         opacity: 0;
                         transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                @keyframes fadeInDown {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-30px);
                     }
                     to {
                         opacity: 1;
@@ -82,8 +103,35 @@ export default function PageFour() {
                     }
                 }
 
+                @keyframes rotateIn {
+                    from {
+                        opacity: 0;
+                        transform: rotate(-10deg) scale(0.9);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: rotate(0deg) scale(1);
+                    }
+                }
+
+                @keyframes slideInFromBottom {
+                    from {
+                        opacity: 0;
+                        transform: translateY(100px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
                 .animate-fade-up {
                     animation: fadeInUp 0.8s ease-out forwards;
+                    opacity: 0;
+                }
+
+                .animate-fade-down {
+                    animation: fadeInDown 0.8s ease-out forwards;
                     opacity: 0;
                 }
                 
@@ -101,33 +149,29 @@ export default function PageFour() {
                     animation: scaleIn 0.8s ease-out forwards;
                     opacity: 0;
                 }
+
+                .animate-rotate-in {
+                    animation: rotateIn 0.8s ease-out forwards;
+                    opacity: 0;
+                }
+
+                .animate-slide-up {
+                    animation: slideInFromBottom 0.8s ease-out forwards;
+                    opacity: 0;
+                }
                 
                 .delay-100 { animation-delay: 0.1s; }
                 .delay-200 { animation-delay: 0.2s; }
                 .delay-300 { animation-delay: 0.3s; }
                 .delay-400 { animation-delay: 0.4s; }
+                .delay-500 { animation-delay: 0.5s; }
             `}</style>
             
-            <div ref={pageRef}>
-                <div className="flex flex-col items-center mb-5 justify-center px-8 md:mt-35 md:ml-5">
-                    <p className={`text-xl font-mono text-black ${isVisible ? 'animate-fade-left delay-100' : ''}`}>
-                        all the projects I have worked on
-                    </p>
-                    <h1 className={`text-3xl underline font-bold text-black ${isVisible ? 'animate-fade-left delay-200' : ''}`}>
-                        Portofolio
-                    </h1>
-                </div>
-
-                <CategoryButton></CategoryButton>
-
-                <div className={`flex justify-center gap-5 flex-wrap`}>
-                        <PortofolioUI></PortofolioUI>
-                        <PortofolioWeb></PortofolioWeb>
-                        <PortofolioApp></PortofolioApp>                
-                        <PortofolioUI></PortofolioUI>
-                        <PortofolioWeb></PortofolioWeb>
-                        <PortofolioApp></PortofolioApp>                
-                </div>
+            <div 
+                ref={elementRef}
+                className={`${isVisible ? `animate-${animation} ${getDelayClass(delay)}` : ''} ${className}`}
+            >
+                {children}
             </div>
         </>
     );
