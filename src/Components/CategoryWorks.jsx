@@ -2,10 +2,9 @@ import React from "react";
 
 export default function CategoryWorks() {
   return (
-        <div className="flex flex-wrap gap-4 mb-5 ml-2">
-            <div className="flex justify-center flex-wrap md:flex md:justify-center md:flex-wrap lg:gap-7">
-                <div className="flex mt-7 bg-white w-90 shadow-2xl h-50 rounded-xl cursor-pointer lg:mt-10 lg:ml-43 md:mt-10 transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
-                    {/* Sliding background overlay */}
+        <div className="flex flex-wrap justify-center">
+            <div className="flex justify-center flex-wrap gap-10">
+                <div className="flex bg-[#D9D9D9] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
                     
                     <div className="flex bg-black w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center" >
@@ -19,8 +18,7 @@ export default function CategoryWorks() {
                         <p className="text-[15px] font-mono text-black group-hover:text-white transition-colors duration-300">Look All My UI / UX Design</p>
                     </div>
                 </div>
-                <div className="flex mt-10 bg-white w-90 shadow-2xl h-50 rounded-xl cursor-pointer lg:mt-10 md:ml-5 transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
-                    {/* Sliding background overlay */}
+                <div className="flex bg-[#D9D9D9] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
                     <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-teal-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
                     
                     <div className="flex bg-black w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center" >
@@ -34,8 +32,7 @@ export default function CategoryWorks() {
                         <p className="text-[15px] font-mono text-black group-hover:text-white transition-colors duration-300">Look All My Website Projects</p>
                     </div>
                 </div>
-                <div className="flex mt-7 bg-white w-90 shadow-2xl h-50 rounded-xl cursor-pointer lg:mt-10 md:ml-5 transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
-                    {/* Sliding background overlay */}
+                <div className="flex bg-[#D9D9D9] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
                     <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
                     
                     <div className="flex bg-black w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center" >

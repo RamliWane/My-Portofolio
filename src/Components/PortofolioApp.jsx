@@ -3,7 +3,7 @@ import React from "react";
 export default function PortofolioApp() {
     return (
         <div className="flex flex-wrap justify-center gap-5 mt-5 ">
-            <div className="bg-white w-100 h-85 rounded-3xl p-4 flex flex-col cursor-pointer transition-transform duration-150 ease-in-out hover:scale-95 shadow-lg">
+            <div className="bg-[#F1E7E7] w-100 h-85 rounded-3xl p-4 flex flex-col cursor-pointer transition-transform duration-150 ease-in-out hover:scale-95 shadow-lg">
                 <div className="flex-1 mb-5 w-full h-48 flex items-center justify-center">
                         <img className="w-full h-55 rounded-2xl" src="./UI UX Desain (3) 1.png" alt="" />
                 </div>

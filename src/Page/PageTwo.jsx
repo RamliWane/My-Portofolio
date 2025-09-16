@@ -106,16 +106,16 @@ export default function PageTwo() {
       `}</style>
       
       <div ref={pageRef} className="flex">
-        <div className="flex flex-wrap">
-          <div className="flex flex-col items-start justify-start px-8 lg:mt-45 lg:ml-26 md:mt-35 md:ml-5 mt-30">
-            <p className={`text-xl font-mono text-black ${isVisible ? 'animate-fade-left delay-100' : ''}`}>
-              all the projects I have worked on
-            </p>
+        <div className="flex flex-wrap justify-center mt-15">
+          <div className="flex flex-col justify-center items-center px-8 mb-20 lg:mt-32 lg:ml-14 lg:mr-10 md:mt-20 md:ml-5">
             <h1 className={`text-3xl underline font-bold text-black ${isVisible ? 'animate-fade-left delay-200' : ''}`}>
               My Works
             </h1>
+            <p className={`text-xl font-mono text-black ${isVisible ? 'animate-fade-left delay-100' : ''}`}>
+              all the projects I have worked on
+            </p>
           </div>
-          <div className={`flex justify-center ${isVisible ? 'animate-scale-in delay-300' : ''}`}>
+          <div className={`flex justify-start ${isVisible ? 'animate-scale-in delay-300' : ''}`}>
             <CategoryWorks></CategoryWorks>
           </div>
         </div>

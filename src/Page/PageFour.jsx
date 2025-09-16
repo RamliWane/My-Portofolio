@@ -108,7 +108,7 @@ export default function PageFour() {
             `}</style>
             
             <div ref={pageRef}>
-                <div className="flex flex-col items-start justify-start px-8 lg:ml-26 md:mt-35 md:ml-5">
+                <div className="flex flex-col items-center mb-5 justify-center px-8 md:mt-35 md:ml-5">
                     <p className={`text-xl font-mono text-black ${isVisible ? 'animate-fade-left delay-100' : ''}`}>
                         all the projects I have worked on
                     </p>
@@ -116,6 +116,26 @@ export default function PageFour() {
                         Portofolio
                     </h1>
                 </div>
+
+                <div className={`flex justify-center ${isVisible ? 'animate-fade-left delay-100' : ''}`}>
+                    <div className="bg-[#D9D9D9] w-180 rounded-4xl p-2 shadow-lg border border-gray-100 mb-8">
+                        <div className="flex justify-center items-center gap-4 flex-wrap">
+                        <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full text-sm font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                            All Projects
+                        </div>
+                        <div className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer hover:shadow-md">
+                            UI/UX Design
+                        </div>
+                        <div className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer hover:shadow-md">
+                            Website
+                        </div>
+                        <div className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer hover:shadow-md">
+                            Mobile Apps
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className={`flex justify-center gap-5 flex-wrap`}>
                     <div className={`${isVisible ? 'animate-scale-in delay-100' : ''}`}>
                         <PortofolioUI></PortofolioUI>

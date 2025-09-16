@@ -110,13 +110,13 @@ export default function FirstPage() {
       
       <div className="flex items-center justify-center px-8 mt-15">
         <div className="flex flex-col md:flex-row mt-10 gap-12">
-          <div className="flex flex-col gap-4 md:w-1/2 ml-4 lg:mt-15 lg:gap-7">
-            <h3 className={`text-3xl font-bold text-black ${isVisible ? 'animate-fade-up delay-100' : ''}`}>
+          <div className="flex flex-col gap-4 md:w-1/2 ml-4 lg:mt-20 lg:gap-5">
+            <h3 className={`text-2xl font-bold text-black ${isVisible ? 'animate-fade-up delay-100' : ''}`}>
               Welcome to Portofolio
             </h3>
             <h1 className={`text-4xl font-bold text-black ${isVisible ? 'animate-fade-up delay-200' : ''}`}>
               Hi, I'm{" "}
-              <span className="text-amber-900">
+              <span className="text-[#A1A1A1]">
                 Ramli Silawane A <br />
                 Beginner Coder.
               </span>
@@ -133,13 +133,13 @@ export default function FirstPage() {
             </div>
           </div>
 
-          <div className={`absolute -mt-10 top-0 right-0 w-[400px] md:w-[400px] lg:w-[550px] hidden md:block ${isVisible ? 'animate-slide-down delay-300' : ''}`}>
-            <img src="./Rectangle 133.png" alt="" />
+          <div className={`absolute top-0 right-0 w-[400px] md:w-[400px] lg:w-[1000px] hidden md:block ${isVisible ? 'animate-slide-down delay-300' : ''}`}>
+            <img src="./RectangleMain.png" alt="" />
           </div>
 
           <div className={`flex justify-center md:w-1/2 pl-10 z-1 ${isVisible ? 'animate-scale-in delay-600' : ''}`}>
             <img
-              className="w-80 -ml-7 h-auto md:w-96 md:h-80 lg:w-96 lg:h-80 lg:mt-20"
+              className="w-80 h-auto md:w-96 md:h-80 lg:w-96 lg:h-80 lg:mt-20"
               src="./RectangleSementara.png"
               alt="globe"
             />
