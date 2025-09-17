@@ -5,7 +5,7 @@ const Button = () => {
       <button
         type="submit"
         className="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 
-        before:absolute before:inset-0 before:bg-[#A1A1A1] before:translate-x-full before:transition-transform before:duration-700 hover:before:translate-x-0 
+        before:absolute before:inset-0 before:bg-[#457476] before:translate-x-full before:transition-transform before:duration-700 hover:before:translate-x-0 
         hover:text-gray-50 before:-z-10 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group text-black"
       >
         Explore

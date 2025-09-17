@@ -10,7 +10,7 @@ export default function PageFour() {
     return (
         <>
             <div>
-                <div className="flex flex-col items-center mb-5 justify-center px-8 md:mt-10 md:ml-5">
+                <div className="flex flex-col lg:ml-30 items-start mb-5 justify-start px-8 md:mt-10 md:ml-5">
                     <AnimatedWrapper animation="fade-left" delay={100}>
                         <p className="text-xl font-mono text-black">
                             all the projects I have worked on
@@ -22,8 +22,9 @@ export default function PageFour() {
                         </h1>
                     </AnimatedWrapper>
                 </div>
-
-                <CategoryButton />
+                <div className="flex lg:ml-35 justify-start">
+                    <CategoryButton/>
+                </div>
 
                 <div className={`flex justify-center gap-5 mb-10 flex-wrap`}>
                     <AnimatedWrapper animation="scale-in" delay={100}>

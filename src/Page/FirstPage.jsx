@@ -14,7 +14,7 @@ export default function FirstPage() {
                 </h3>
                 <h1 className="text-4xl font-bold text-black">
                   Hi, I'm{" "}
-                  <span className="text-[#A1A1A1]">
+                  <span className="text-[#457476]">
                     Ramli Silawane <br />
                     A Beginner Coder.
                   </span>
@@ -26,25 +26,22 @@ export default function FirstPage() {
                 <div className="self-start mt-4">
                   <Button />
                 </div>
-                <div className="mt-10">
+                <div className="mb-5">
                   <SocialIcon />
                 </div>
         </div>
                 <div className="flex justify-center">
                   <div className="flex justify-center z-1">
                     <img
-                      className="w-80 mt-10 h-auto md:w-120 md:h-90 lg:ml-30 lg:w-100 lg:h-80 lg:mt-20"
+                      className="w-80 mt-10 h-auto md:w-120 md:h-90 lg:ml-30 lg:w-100 lg:h-80"
                       src="./RectangleSementara.png"
                       alt="globe"
                     />
                 </div>
               </div>
-                <div className="hidden md:block absolute -top-50 right-[0px] lg:w-[800px] md:w-[500px] md:h-[300px]">
-                  <img src="./Rectangle 1552.png" alt="" />
-              </div>
-              <div className="absolute hidden md:block lg:block justify-center ml-10 mt-145">
-                  <img className="w-300 h-7" src="./line.png" alt="" />
-              </div>
+                <div className="hidden lg:block absolute top-0 right-0 lg:w-[900px] lg:h-[400px]">
+                  <img src="./RectangleIjo.png" alt="" />
+                </div>
       </div>
   );
 }
