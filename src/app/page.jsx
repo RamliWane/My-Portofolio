@@ -8,11 +8,11 @@ import FooterPage from "@/Page/FooterPage";
 export default function Home() {
   return (
     <main className="overflow-y-auto overflow-x-hidden">
-        <FirstPage></FirstPage>
-        <PageTwo></PageTwo>
-        <PageFour></PageFour>
-        <PageThree></PageThree>
-        <FooterPage></FooterPage>
+      <FirstPage />
+      <PageTwo />
+      <PageThree />
+      <PageFour />
+      <FooterPage />
     </main>
   );
 }

@@ -8,40 +8,44 @@ import AnimatedWrapper from "../Components/AnimatedWrapper";
 export default function FirstPage() {
   return (
       <div className="flex justify-center flex-wrap mt-30">
-        <div className="flex self-start ml-5 items-start flex-wrap flex-col lg:mr-10 gap-5">
-                <h3 className="text-2xl font-bold text-black">
-                  Welcome to Portofolio
-                </h3>
-                <h1 className="text-4xl font-bold text-black">
-                  Hi, I'm{" "}
-                  <span className="text-[#457476]">
-                    Ramli Silawane <br />
-                    A Beginner Coder.
-                  </span>
-                </h1>
-                <p className="text-black text-xl font-mono">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />Ut enim ad minim veniam
-                </p>
-                <div className="self-start mt-4">
-                  <Button />
+              <AnimatedWrapper animation="fade-left" delay={100}>  
+                  <div className="flex justify-center mb-10 z-1">
+                    <div className="flex justify-center">
+                      <img
+                        className="w-80 h-auto md:w-120 md:h-90 lg:w-120 lg:h-100"
+                        src="./New-Retangle.png"
+                        alt="globe"
+                        />
+                  </div>
                 </div>
-                <div className="mb-5">
-                  <SocialIcon />
-                </div>
+              </AnimatedWrapper>
+
+        <div className="flex self-start ml-5 items-start flex-wrap lg:ml-40 flex-col gap-7">
+                <AnimatedWrapper animation="fade-left" delay={100}>  
+                  <h3 className="text-2xl font-bold text-black">
+                    Welcome to Portofolio
+                  </h3>
+                </AnimatedWrapper>
+                 <AnimatedWrapper animation="fade-left" delay={100}>   
+                    <h1 className="text-4xl font-bold text-black">
+                      Hi, I'm{" "}
+                        Ramli Silawane <br />
+                        A Beginner Coder.
+                    </h1>
+                 </AnimatedWrapper>
+                  <AnimatedWrapper animation="fade-left" delay={100}>  
+                  <p className="text-black text-xl font-mono">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />Ut enim ad minim veniam
+                  </p>
+                  <div className="self-start lg:-ml-120 md:-ml-120 mt-4">
+                    <Button />
+                  </div>
+                  <div className="mb-5">
+                    <SocialIcon />
+                  </div>
+                </AnimatedWrapper>
         </div>
-                <div className="flex justify-center">
-                  <div className="flex justify-center z-1">
-                    <img
-                      className="w-80 mt-10 h-auto md:w-120 md:h-90 lg:ml-30 lg:w-100 lg:h-80"
-                      src="./RectangleSementara.png"
-                      alt="globe"
-                    />
-                </div>
-              </div>
-                <div className="hidden lg:block absolute top-0 right-0 lg:w-[900px] lg:h-[400px]">
-                  <img src="./RectangleIjo.png" alt="" />
-                </div>
       </div>
   );
 }

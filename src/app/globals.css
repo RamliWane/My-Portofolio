@@ -22,7 +22,12 @@
 }
 
 body {
-  background: #FFFFFF;
+  background: #f6f6f6f6;
   color: var(--foreground);
   font-family: var(--font-kanit), system-ui, sans-serif;
+}
+/* styles/globals.css */
+.gradient-bg {
+  background: linear-gradient(to bottom, #99E5B5, #FFFFFF);
+  min-height: 100vh;
 }

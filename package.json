@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-"dev": "cross-env BROWSER=chrome next dev",
+    "dev": "cross-env BROWSER=chrome next dev",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
@@ -13,7 +13,8 @@
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "styled-components": "^6.1.19"
+    "styled-components": "^6.1.19",
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
