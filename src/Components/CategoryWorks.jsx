@@ -6,7 +6,10 @@ export default function CategoryWorks() {
             <div className="flex justify-center flex-wrap gap-5">
                 <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
-                    
+                    <div className="absolute mb-25 opacity-40 mr-5 inset-0 flex items-end justify-end">
+                        <img className="w-25 h-20" src="./01.png" alt="" />
+                    </div>
+
                     <div className="flex bg-[#000000] w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center" >
                         <svg className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
@@ -20,7 +23,10 @@ export default function CategoryWorks() {
                 </div>
                 <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
                     <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-teal-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
-                    
+                    <div className="absolute mb-25 opacity-40 mr-5 inset-0 flex items-end justify-end">
+                        <img className="w-25 h-20" src="./02.png" alt="" />
+                    </div>
+
                     <div className="flex bg-[#000000] w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center" >
                         <svg className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
@@ -34,7 +40,10 @@ export default function CategoryWorks() {
                 </div>
                 <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group" >
                     <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
-                    
+                    <div className="absolute mb-25 opacity-40 mr-5 inset-0 flex items-end justify-end">
+                        <img className="w-25 h-20" src="./03.png" alt="" />
+                    </div>
+
                     <div className="flex bg-[#000000] w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center" >
                         <svg className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>

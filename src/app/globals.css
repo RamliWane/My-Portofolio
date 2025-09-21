@@ -28,6 +28,6 @@ body {
 }
 /* styles/globals.css */
 .gradient-bg {
-  background: linear-gradient(to bottom, #99E5B5, #FFFFFF);
+  background: linear-gradient(to bottom right, #99E5B5, #ffffff);
   min-height: 100vh;
 }

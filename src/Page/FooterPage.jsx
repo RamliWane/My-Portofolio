@@ -5,11 +5,11 @@ import AnimatedWrapper from "@/Components/AnimatedWrapper";
 
 export default function FooterPage() {
     return (
-        <div className="flex justify-center flex-col items-center px-4">
+        <div className="flex justify-center flex-col items-center lg:-ml-20 px-4 mt-40">
             <div className="w-full max-w-6xl mx-auto">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-40 items-center lg:items-start justify-center">
                     <AnimatedWrapper animation="fade-left" delay={100}>            
-                        <div className="bg-[#F0F0F0] w-full max-w-sm lg:w-100 h-60 rounded-3xl flex flex-col justify-center items-center p-8 order-2 lg:order-1">
+                        <div className="bg-white w-full max-w-sm lg:w-100 h-60 rounded-3xl flex flex-col justify-center items-center p-8 order-2 lg:order-1">
                             <div className="space-y-8 text-start">
                                 <div>
                                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Email me at</h3>
