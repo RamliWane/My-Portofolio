@@ -68,12 +68,12 @@ export default function FirstPage() {
           className="flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 group"
           onClick={scrollToNextSection}
         >
-          <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors duration-300">
+          <h3 className="text-lg hidden lg:flex md:flex font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors duration-300">
             Scroll Down
           </h3>
           
           {/* Animated Arrow Down */}
-          <div className="flex flex-col items-center">
+          <div className="hidden lg:flex md:flex flex-col items-center">
             {/* First arrow */}
             <div className="animate-bounce">
               <svg 
