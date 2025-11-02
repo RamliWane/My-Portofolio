@@ -27,23 +27,8 @@ export default function PageFour() {
                 </div>
 
                 <div className={`flex justify-center gap-5 mb-10 flex-wrap`}>
-                    <AnimatedWrapper animation="scale-in" delay={100}>
-                        <PortofolioUI />
-                    </AnimatedWrapper>
                     <AnimatedWrapper animation="scale-in" delay={200}>
                         <PortofolioWeb />
-                    </AnimatedWrapper>
-                    <AnimatedWrapper animation="scale-in" delay={300}>
-                        <PortofolioApp />
-                    </AnimatedWrapper>
-                    <AnimatedWrapper animation="scale-in" delay={400}>
-                        <PortofolioUI />
-                    </AnimatedWrapper>
-                    <AnimatedWrapper animation="scale-in" delay={500}>
-                        <PortofolioWeb />
-                    </AnimatedWrapper>
-                    <AnimatedWrapper animation="scale-in" delay={600}>
-                        <PortofolioApp />
                     </AnimatedWrapper>
                 </div>
             </div>

@@ -14,7 +14,7 @@ export default function PageThree() {
                         <AnimatedWrapper animation="fade-left" delay={100}>        
                             <div className="flex flex-col gap-4 lg:ml-40 md:w-1/2 ml-5">
                                 <p className="text-xl font-mono text-black ">all the projects I have worked on</p>
-                                <h1 className="text-4xl -mt-4 underline font-bold text-[#457476] ">About Me</h1>
+                                <h1 className="text-4xl -mt-4 underline font-bold text-black ">About Me</h1>
                                 <p className="text-black text-2xl leading-8 md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <br /> dolore magna aliqua.Ut enim ad minim veniam</p>
                                 <div className="self-start mb-10 mt-4">
                                     <Button />

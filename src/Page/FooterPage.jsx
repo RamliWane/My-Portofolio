@@ -31,7 +31,7 @@ export default function FooterPage() {
                               
                         <div className="flex-1 max-w-lg w-full order-1 lg:order-2">
                             <div className="text-center lg:text-left">
-                                <h1 className="text-3xl lg:text-4xl font-bold text-[#457476] mb-4">Contact now</h1>
+                                <h1 className="text-3xl lg:text-4xl font-bold text-black mb-4">Contact now</h1>
                                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                                     collaboration or ask questions? You can send me a message.<br className="hidden sm:block"/>
                                 </p>

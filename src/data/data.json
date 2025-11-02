@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "E-Commerce Website",
+            "descriptions": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "email": "jane@example.com",
+            "category": "Web",
+            "times": "Jan 2023 - Mar 2023",
+            "image": "/Design-Web-4 1.png",
+            "icon": "/WebsiteIcon.png"
+        },
+        {
+            "id": 2,
+            "name": "Ui/UX Design",
+            "descriptions": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "email": "jane@example.com",
+            "category": "Ui/UX Design",
+            "times": "Jan 2023 - Mar 2023",
+            "image": "/UI UX Desain (3) 1.png",
+            "icon": "/gg_figma.png"
+        },
+        {
+            "id": 3,
+            "name": "Mobile App Design",
+            "descriptions": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "email": "jane@example.com",
+            "category": "Mobile Apps",
+            "times": "Jan 2023 - Mar 2023",
+            "image": "/Design-Web-4 1.png",
+            "icon": "/mobile-app.png"
+        }
+    ]
+}
