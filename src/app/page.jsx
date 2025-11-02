@@ -1,9 +1,9 @@
 import React from "react";
-import FirstPage from "../Page/FirstPage";
-import PageTwo from "@/Page/PageTwo";
-import PageThree from "@/Page/PageThree";
-import PageFour from "@/Page/PageFour";
-import FooterPage from "@/Page/FooterPage";
+import FirstPage from "../HeroPage/FirstPage";
+import PageTwo from "@/HeroPage/PageTwo";
+import PageThree from "@/HeroPage/PageThree";
+import PageFour from "@/HeroPage/PageFour";
+import FooterPage from "@/HeroPage/FooterPage";
 
 export default function Home() {
   return (

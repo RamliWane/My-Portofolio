@@ -8,7 +8,7 @@ export default function PortofolioWeb({ animation = "fadeInUp", delay = 0 }) {
         <AnimatedWrapper animation={animation} delay={delay}>
             <div className="flex flex-wrap justify-center gap-5 mt-5">
                 {data.users.map((users) => (
-                    <div className="bg-white w-100 h-85 rounded-3xl p-4 flex flex-col cursor-pointer transition-transform duration-150 ease-in-out hover:scale-95 shadow-lg" onMouseEnter={() => setShowTooltip(true)}
+                    <div  key={users.id} className="bg-white w-100 h-85 rounded-3xl p-4 flex flex-col cursor-pointer transition-transform duration-150 ease-in-out hover:scale-95 shadow-lg" onMouseEnter={() => setShowTooltip(true)}
                         onMouseLeave={() => setShowTooltip(false)}>
 
                         <div className="flex-1 mb-10 w-full h-48 flex items-center justify-center">
@@ -32,7 +32,6 @@ export default function PortofolioWeb({ animation = "fadeInUp", delay = 0 }) {
                     </div>
                 ))}
             </div>
-
         </AnimatedWrapper>
     );
 }
