@@ -3,32 +3,84 @@
         {
             "id": 1,
             "name": "E-Commerce Website",
-            "descriptions": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "email": "jane@example.com",
-            "category": "Web",
-            "times": "Jan 2023 - Mar 2023",
-            "image": "/Design-Web-4 1.png",
-            "icon": "/WebsiteIcon.png"
+            "descriptions": "Website ini merupakan bagian dari proyek Assessment dari SMK Taruna Bhakti. LookSy adalah platform e-commerce modern yang dirancang untuk memberikan pengalaman berbelanja online yang mudah dan menyenangkan. Di halaman utama, kamu akan menemukan berbagai fitur unggulan seperti katalog produk yang terorganisir dengan baik, sistem keranjang belanja yang intuitif, serta tampilan produk dengan foto berkualitas tinggi dan deskripsi yang detail.",
+            "descriptions2": "Dengan LookSy, pengguna dapat dengan mudah menelusuri berbagai kategori produk, menambahkan item ke keranjang belanja, dan melakukan pembayaran dengan aman. Platform ini juga dilengkapi dengan fitur pencarian yang efisien, memungkinkan pengguna untuk menemukan produk yang mereka inginkan dengan cepat. Selain itu, LookSy menawarkan berbagai metode pembayaran yang aman dan dukungan pelanggan yang responsif untuk memastikan kepuasan pengguna.",
+            "category": "Website",
+            "times": "Jan 2025 - Mar 2025",
+            "image": "/Detail-web-1.png",
+            "imagefooterdetail": "/Group-15.png",
+            "icon": "/WebsiteIcon.png",
+            "descriptionstools": "Project ini dibangun menggunakan teknologi modern untuk menciptakan pengalaman pengguna yang optimal dan performa yang cepat.",
+            "toolsicon": [
+                {
+                    "name": "Tailwind CSS",
+                    "icon": "/tailwind-css.png"
+                },
+                {
+                    "name": "HTML",
+                    "icon": "/html.png"
+                },
+                {
+                    "name": "Javascript",
+                    "icon": "/javascript.png"
+                }
+            ],
+            "footerdescriptions": "E-commerce platform modern untuk pengalaman berbelanja yang optimal."
         },
         {
             "id": 2,
-            "name": "Ui/UX Design",
-            "descriptions": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "email": "jane@example.com",
-            "category": "Ui/UX Design",
-            "times": "Jan 2023 - Mar 2023",
-            "image": "/UI UX Desain (3) 1.png",
-            "icon": "/gg_figma.png"
+            "name": "E-Commerce Website",
+            "descriptions": "Website ini merupakan bagian dari proyek Assessment dari SMK Taruna Bhakti. LookSy adalah platform e-commerce modern yang dirancang untuk memberikan pengalaman berbelanja online yang mudah dan menyenangkan. Di halaman utama, kamu akan menemukan berbagai fitur unggulan seperti katalog produk yang terorganisir dengan baik, sistem keranjang belanja yang intuitif, serta tampilan produk dengan foto berkualitas tinggi dan deskripsi yang detail.",
+            "descriptions2": "Dengan LookSy, pengguna dapat dengan mudah menelusuri berbagai kategori produk, menambahkan item ke keranjang belanja, dan melakukan pembayaran dengan aman. Platform ini juga dilengkapi dengan fitur pencarian yang efisien, memungkinkan pengguna untuk menemukan produk yang mereka inginkan dengan cepat. Selain itu, LookSy menawarkan berbagai metode pembayaran yang aman dan dukungan pelanggan yang responsif untuk memastikan kepuasan pengguna.",
+            "category": "Website",
+            "times": "Jan 2025 - Mar 2025",
+            "image": "/Detail-web-1.png",
+            "imagefooterdetail": "/Group-15.png",
+            "icon": "/WebsiteIcon.png",
+            "descriptionstools": "Project ini dibangun menggunakan teknologi modern untuk menciptakan pengalaman pengguna yang optimal dan performa yang cepat.",
+            "toolsicon": [
+                {
+                    "name": "Tailwind CSS",
+                    "icon": "/tailwind-css.png"
+                },
+                {
+                    "name": "HTML",
+                    "icon": "/html.png"
+                },
+                {
+                    "name": "Javascript",
+                    "icon": "/javascript.png"
+                }
+            ],
+            "footerdescriptions": "E-commerce platform modern untuk pengalaman berbelanja yang optimal."
         },
         {
             "id": 3,
-            "name": "Mobile App Design",
-            "descriptions": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "email": "jane@example.com",
-            "category": "Mobile Apps",
-            "times": "Jan 2023 - Mar 2023",
-            "image": "/Design-Web-4 1.png",
-            "icon": "/mobile-app.png"
+            "name": "E-Commerce Website",
+            "descriptions": "Website ini merupakan bagian dari proyek Assessment dari SMK Taruna Bhakti. LookSy adalah platform e-commerce modern yang dirancang untuk memberikan pengalaman berbelanja online yang mudah dan menyenangkan. Di halaman utama, kamu akan menemukan berbagai fitur unggulan seperti katalog produk yang terorganisir dengan baik, sistem keranjang belanja yang intuitif, serta tampilan produk dengan foto berkualitas tinggi dan deskripsi yang detail.",
+            "descriptions2": "Dengan LookSy, pengguna dapat dengan mudah menelusuri berbagai kategori produk, menambahkan item ke keranjang belanja, dan melakukan pembayaran dengan aman. Platform ini juga dilengkapi dengan fitur pencarian yang efisien, memungkinkan pengguna untuk menemukan produk yang mereka inginkan dengan cepat. Selain itu, LookSy menawarkan berbagai metode pembayaran yang aman dan dukungan pelanggan yang responsif untuk memastikan kepuasan pengguna.",
+            "category": "Website",
+            "times": "Jan 2025 - Mar 2025",
+            "image": "/Detail-web-1.png",
+            "imagefooterdetail": "/Group-15.png",
+            "icon": "/WebsiteIcon.png",
+            "descriptionstools": "Project ini dibangun menggunakan teknologi modern untuk menciptakan pengalaman pengguna yang optimal dan performa yang cepat.",
+            "toolsicon": [
+                {
+                    "name": "Tailwind CSS",
+                    "icon": "/tailwind-css.png"
+                },
+                {
+                    "name": "HTML",
+                    "icon": "/html.png"
+                },
+                {
+                    "name": "Javascript",
+                    "icon": "/javascript.png"
+                }
+            ],
+            "footerdescriptions": "E-commerce platform modern untuk pengalaman berbelanja yang optimal."
         }
+        
     ]
 }
