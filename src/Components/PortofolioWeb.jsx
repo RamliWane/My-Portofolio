@@ -4,40 +4,36 @@ import data from "../data/data.json";
 import Link from "next/link";
 
 export default function PortofolioWeb({ animation = "fadeInUp", delay = 0 }) {
-    const [hoveredId, setHoveredId] = useState(null); // ⬅️ Track ID yang di-hover
-    
+    const [hoveredId, setHoveredId] = useState(null);
+
     return (
-        <AnimatedWrapper animation="fade-right" delay={100}>
-            <div className="flex flex-wrap justify-center gap-5 mt-5">
-                {data.users.map((users) => (
-                    <Link href={`/detail/${users.id}`} key={users.id}>
-                        <div 
-                            className="bg-white w-100 h-85 rounded-3xl p-4 flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-2 shadow-lg relative" 
-                            onMouseEnter={() => setHoveredId(users.id)} // ⬅️ Set ID
-                            onMouseLeave={() => setHoveredId(null)}     // ⬅️ Reset
+            <div className="min-h-screen bg-transparent py-10 px-5">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[280px]">
+                    
+                    {data.users.map((user, index) => (
+                        <Link 
+                            href={`/detail/${user.id}`} 
+                            key={user.id}
+                            className={`rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 ${
+                                // Card ke-1: Panjang 2 row
+                                index === 0 ? 'lg:row-span-2 bg-indigo-600' :
+                                // Card ke-5: Lebar 2 kolom
+                                index >= 3 && index <= 4 ? 'lg:col-span-2 bg-indigo-600' :
+                                // Card ke-7: Lebar 2 kolom DAN panjang 2 row
+                                index === 6 ? 'lg:col-span-2 lg:row-span-2 bg-red-600' :
+                                // Sisanya normal
+                                'bg-[#F5E6D3]'
+                            }`}
                         >
-                            <div className="flex-1 mb-10 w-full h-48 flex items-center justify-center">
-                                <img className="w-full h-55 rounded-2xl" src={users.image} alt="" />
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                                    <img className="w-8 h-8 rounded-2xl" src={users.icon} alt="UI/UX Design" />
-                                </div>
-                                <div className="flex flex-col">
-                                    <h1 className="text-xl font-bold text-black">{users.name}</h1>
-                                    <p className="text-sm text-gray-600">{users.category}</p>
-                                </div>
-                            </div>
-                            {hoveredId === users.id && ( // ⬅️ Cek ID yang di-hover
-                                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10 animate-fadeIn">
-                                    Click to view details
-                                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                                </div>
-                            )}
-                        </div>
-                    </Link>
-                ))}
+                            <img
+                                src={user.image}
+                                alt={`Card ${user.id}`}
+                                className="w-full h-full object-cover"
+                            />
+                        </Link>
+                    ))}
+
+                </div>
             </div>
-        </AnimatedWrapper>
     );
 }

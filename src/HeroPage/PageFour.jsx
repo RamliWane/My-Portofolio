@@ -1,35 +1,42 @@
 "use client";
 import React from "react";
-import PortofolioApp from "@/Components/PortofolioApp";
-import PortofolioUI from "@/Components/PortofolioUI";
 import PortofolioWeb from "@/Components/PortofolioWeb";
 import CategoryButton from "@/Components/CategoryButton";
 import AnimatedWrapper from "@/Components/AnimatedWrapper";
+import { useState } from "react";
 
 export default function PageFour() {
+        const [selectedCategory, setSelectedCategory] = useState('All');
+
+    // Function untuk handle perubahan category
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+        console.log('Category selected:', category);
+    };
     return (
         <>
-            <div>
-                <div className="flex flex-col lg:ml-30 items-start mb-5 justify-start px-8 md:mt-10 md:ml-5">
-                    <AnimatedWrapper animation="fade-left" delay={100}>
+            <AnimatedWrapper animation="fade-right" delay={100}>
+                <div id="portofolio">
+                    <div className="flex flex-col lg:ml-30 items-start mb-5 justify-start px-8 md:mt-10 md:ml-5">
                         <p className="text-xl font-mono text-black">
                             all the projects I have worked on
                         </p>
-                    </AnimatedWrapper>
-                    <AnimatedWrapper animation="fade-left" delay={200}>
                         <h1 className="text-3xl underline font-bold text-black">
                             Portofolio
                         </h1>
-                    </AnimatedWrapper>
-                </div>
-                <div className="flex lg:ml-35 justify-start">
-                    <CategoryButton/>
-                </div>
+                    </div>
+                    <div className="flex lg:ml-35 justify-start">
+                        <CategoryButton onCategoryChange={handleCategoryChange} /> //component nya di panggil ke sini
+                    </div>
 
-                <div className={`flex justify-center gap-5 mb-10 flex-wrap`}>
-                        <PortofolioWeb />
+                    <div className={`flex justify-center gap-5 mb-10 flex-wrap`}>
+                       <PortofolioWeb selectedCategory={selectedCategory} />
+                    </div>
+                    <div className="flex justify-center items-center">
+                        <img className="w-330 h-5" src="./line.png" alt="" />
+                    </div>
                 </div>
-            </div>
+            </AnimatedWrapper>
         </>
     );
 }

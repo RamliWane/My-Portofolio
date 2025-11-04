@@ -3,10 +3,8 @@ import React from "react";
 export default function CategoryWorks() {
   return (
     <div className="flex flex-wrap justify-center">
-      <div className="flex justify-center flex-wrap gap-5">
-        {/* CARD 1 */}
+      <div className="flex justify-center flex-wrap gap-8">
         <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group">
-          {/* background slide jadi hitam */}
           <div className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
 
           <div className="absolute mb-25 opacity-40 mr-5 inset-0 flex items-end justify-end">
@@ -45,7 +43,6 @@ export default function CategoryWorks() {
           </div>
         </div>
 
-        {/* CARD 2 */}
         <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group">
           <div className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
 
@@ -85,7 +82,6 @@ export default function CategoryWorks() {
           </div>
         </div>
 
-        {/* CARD 3 */}
         <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group">
           <div className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
 

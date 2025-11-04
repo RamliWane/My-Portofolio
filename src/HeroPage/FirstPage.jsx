@@ -17,7 +17,6 @@ export default function FirstPage() {
   return (
     <div className="flex justify-center flex-wrap mt-10 lg:mt-30 relative">
       <AnimatedWrapper animation="fade-left" delay={100}>
-        {/* Image Section */}
         <div className="flex justify-center mb-10 z-1">
           <div className="flex justify-center">
             <img
@@ -29,7 +28,6 @@ export default function FirstPage() {
         </div>
       </AnimatedWrapper>
 
-      {/* Text Content Section */}
       <div className="flex self-start ml-10 items-start flex-wrap lg:ml-30 flex-col gap-7">
         <AnimatedWrapper animation="fade-left" delay={100}>
           <h3 className="text-2xl font-bold text-black">
@@ -63,54 +61,50 @@ export default function FirstPage() {
       </div>
 
 
-        {/* Animated Scroll Down Section - Positioned at bottom center */}
-        <div className="absolute -bottom-15 left-1/2 transform -translate-x-1/2">
-          <div
-            className="flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 group"
-            onClick={scrollToNextSection}
-          >
-            <h3 className="text-lg hidden lg:flex md:flex font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors duration-300">
-              Scroll Down
-            </h3>
+      <div className="absolute -bottom-15 left-1/2 transform -translate-x-1/2">
+        <div
+          className="flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 group"
+          onClick={scrollToNextSection}
+        >
+          <h3 className="text-lg hidden lg:flex md:flex font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors duration-300">
+            Scroll Down
+          </h3>
 
-            {/* Animated Arrow Down */}
-            <div className="hidden lg:flex md:flex flex-col items-center">
-              {/* First arrow */}
-              <div className="animate-bounce">
-                <svg
-                  className="w-5 h-5 text-black mb-1 group-hover:text-gray-700 transition-colors duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
+          <div className="hidden lg:flex md:flex flex-col items-center">
+            <div className="animate-bounce">
+              <svg
+                className="w-5 h-5 text-black mb-1 group-hover:text-gray-700 transition-colors duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
 
-              {/* Second arrow dengan delay animation */}
-              <div className="animate-bounce" style={{ animationDelay: '0.2s' }}>
-                <svg
-                  className="w-4 h-4 text-black opacity-60 group-hover:text-gray-700 transition-colors duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
+            <div className="animate-bounce" style={{ animationDelay: '0.2s' }}>
+              <svg
+                className="w-4 h-4 text-black opacity-60 group-hover:text-gray-700 transition-colors duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </div>
           </div>
         </div>
+      </div>
     </div>
   );
 }

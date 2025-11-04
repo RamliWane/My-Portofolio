@@ -5,17 +5,41 @@ import AnimatedWrapper from "@/Components/AnimatedWrapper";
 export default function PageThree() {
     return (
         <AnimatedWrapper animation="fade-left" delay={100}>
-            <div className=" bg-[#F0F0F0] h-auto flex items-center justify-center flex-wrap px-8 mt-10 mb-30">
-                <div className="flex justify-center mt-10 md:w-100 md:-ml-10 md:mr-5 md:mt-10 md:mb-5 pl-10 z-1">
-                    <img className="w-100 -ml-10 h-auto md:w-96 md:h-80 lg:ml-10 lg:h-100 lg:w-200 md:ml-5" src="./Ellipse 40.png" alt="globe" />
-                </div>
-                <div className="flex flex-col gap-4 lg:ml-40 md:w-1/2 ml-5">
-                    <p className="text-xl font-mono text-black ">all the projects I have worked on</p>
-                    <h1 className="text-4xl -mt-4 underline font-bold text-black ">About Me</h1>
-                    <p className="text-black text-2xl leading-8 md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <br /> dolore magna aliqua.Ut enim ad minim veniam</p>
-                    <div className="self-start mb-10 mt-4">
-                        <Button />
+            <div id="about" className="w-full px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-center items-center">
+                    <div className="bg-[#F0F0F0] px-5 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-13 rounded-xl mt-10 mb-20 sm:mb-30 w-full max-w-7xl">
+                        
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl pl-0 sm:pl-5 underline font-bold text-black mb-6 sm:mb-10">
+                            About Me
+                        </h1>
+                        
+                        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 items-center">
+                            <div className="flex-shrink-0 w-full lg:w-auto pl-0 sm:pl-5">
+                                <img 
+                                    className="w-full max-w-md lg:max-w-xl mx-auto" 
+                                    src="./about-coba.png" 
+                                    alt="globe" 
+                                />
+                            </div>
+                            
+                            <div className="flex flex-col gap-4 pl-0 sm:pl-5 w-full">
+                                <p className="text-black text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                </p>
+                                <div className="self-start mb-4 sm:mb-10 mt-2 sm:mt-4">
+                                    <Button />
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                
+                <div className="flex justify-center items-center">
+                    <img 
+                        className="w-330 h-5" 
+                        src="./line.png" 
+                        alt="separator line" 
+                    />
                 </div>
             </div>
         </AnimatedWrapper>

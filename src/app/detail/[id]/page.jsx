@@ -40,7 +40,6 @@ export default function Detail( ) {
                         />
                     </div>
                 </div>
-
                 <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     <div className="space-y-4">
                         <h2 className="text-2xl sm:text-3xl font-bold text-black">
@@ -111,9 +110,12 @@ export default function Detail( ) {
                             alt="Project Detail"
                         />
                     </div>
+                    <div className="flex justify-center pt-5 items-center">
+                        <img className="w-330 h-5" src="../line.png" alt="" />
+                    </div>
                 </div>
 
-                <footer className="max-w-6xl mx-auto mt-20 pt-12 pb-8 border-t lg:ml-55 border-gray-200">
+                <footer className="max-w-6xl mx-auto pt-12 pb-8 border-t lg:ml-55 border-gray-200">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                         <div className="space-y-3">
                             <h3 className="text-lg font-bold text-black">LookSy Project</h3>

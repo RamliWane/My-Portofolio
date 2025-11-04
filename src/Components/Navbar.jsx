@@ -36,7 +36,7 @@ export default function Navbar() {
 
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <li>
-            <Link href="/" className={`transition-colors duration-300 font-semibold ${
+            <Link href="#home" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
                 ? "text-black hover:text-amber-300 drop-shadow-lg" 
                 : "text-gray-700 hover:text-amber-900"
@@ -54,16 +54,16 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="#skills" className={`transition-colors duration-300 font-semibold ${
+            <Link href="#portofolio" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
                 ? "text-black hover:text-amber-300 drop-shadow-lg" 
                 : "text-gray-700 hover:text-amber-900"
             }`}>
-              Skills
+              Portofolio
             </Link>
           </li>
           <li>
-            <Link href="#contact" className={`transition-colors duration-300 font-semibold ${
+            <Link href="#footer" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
                 ? "text-black hover:text-amber-300 drop-shadow-lg" 
                 : "text-gray-700 hover:text-amber-900"

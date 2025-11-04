@@ -6,23 +6,24 @@ import AnimatedWrapper from "@/Components/AnimatedWrapper";
 export default function FooterPage() {
     return (
         <AnimatedWrapper animation="fade-left" delay={100}>
-            <div className="flex justify-center flex-col items-center lg:-ml-20 px-4 mt-40">
+            <div id="footer" className="flex justify-center flex-col items-center lg:-ml-20 px-4 mt-40">
                 <div className="w-full max-w-6xl mx-auto">
-                    <div className="flex flex-col lg:flex-row gap-12 lg:gap-40 items-center lg:items-start justify-center">
-                        <div className="bg-white w-full max-w-sm lg:w-100 h-60 rounded-3xl flex flex-col justify-center items-center p-8 order-2 lg:order-1">
-                            <div className="space-y-8 text-start">
-                                <div>
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Email me at</h3>
-                                    <a href="mailto:ramlisilawane865@gmail.com" className="text-xl text-gray-800 hover:text-[#457476] transition-colors break-all">
-                                        ramlisilawane865@gmail.com
-                                    </a>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Whatsapp me at</h3>
-                                    <a href="https://wa.me/6281211868821" className="text-xl text-gray-800 hover:text-[#457476] transition-colors">
-                                        +62-812-1186-8821
-                                    </a>
+                    <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start justify-center">
+                        <div className="lg:pr-25 md:pr-25">
+                            <div className="bg-white w-full max-w-sm rounded-3xl flex flex-col justify-center items-center p-8 pr-10 order-2 lg:order-1">
+                                <div className="space-y-8 text-start">
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-gray-900 mb-3">Email me at</h3>
+                                        <a href="mailto:ramlisilawane865@gmail.com" className="text-xl text-gray-800 hover:text-[#457476] transition-colors break-all">
+                                            ramlisilawane865@gmail.com
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-gray-900 mb-3">Whatsapp me at</h3>
+                                        <a href="https://wa.me/6281211868821" className="text-xl text-gray-800 hover:text-[#457476] transition-colors">
+                                            +62-812-1186-8821
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
