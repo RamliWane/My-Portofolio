@@ -1,3 +1,5 @@
+//page tempat memanggil component category button dan portofolio web
+
 "use client";
 import React from "react";
 import PortofolioWeb from "@/Components/PortofolioWeb";
@@ -15,7 +17,6 @@ export default function PageFour() {
     };
     return (
         <>
-            <AnimatedWrapper animation="fade-right" delay={100}>
                 <div id="portofolio">
                     <div className="flex flex-col lg:ml-30 items-start mb-5 justify-start px-8 md:mt-10 md:ml-5">
                         <p className="text-xl font-mono text-black">
@@ -26,7 +27,7 @@ export default function PageFour() {
                         </h1>
                     </div>
                     <div className="flex lg:ml-35 justify-start">
-                        <CategoryButton onCategoryChange={handleCategoryChange} /> //component nya di panggil ke sini
+                        <CategoryButton onCategoryChange={handleCategoryChange} />
                     </div>
 
                     <div className={`flex justify-center gap-5 mb-10 flex-wrap`}>
@@ -36,7 +37,6 @@ export default function PageFour() {
                         <img className="w-330 h-5" src="./line.png" alt="" />
                     </div>
                 </div>
-            </AnimatedWrapper>
         </>
     );
 }

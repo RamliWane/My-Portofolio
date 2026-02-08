@@ -5,7 +5,6 @@ import AnimatedWrapper from "@/Components/AnimatedWrapper";
 
 export default function FooterPage() {
     return (
-        <AnimatedWrapper animation="fade-left" delay={100}>
             <div id="footer" className="flex justify-center flex-col items-center lg:-ml-20 px-4 mt-40">
                 <div className="w-full max-w-6xl mx-auto">
                     <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start justify-center">
@@ -90,6 +89,5 @@ export default function FooterPage() {
                 </div>
                 <h1 className=" flex justify-center mr-10 text-center mb-5 mt-10 text-black font-kanit text-xl">@2025 Ramli silawane</h1>
             </div>
-        </AnimatedWrapper>
     );
 }

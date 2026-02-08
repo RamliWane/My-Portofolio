@@ -4,7 +4,6 @@ import AnimatedWrapper from "@/Components/AnimatedWrapper";
 
 export default function PageThree() {
     return (
-        <AnimatedWrapper animation="fade-left" delay={100}>
             <div id="about" className="w-full px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-center items-center">
                     <div className="bg-[#F0F0F0] px-5 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-13 rounded-xl mt-10 mb-20 sm:mb-30 w-full max-w-7xl">
@@ -42,6 +41,5 @@ export default function PageThree() {
                     />
                 </div>
             </div>
-        </AnimatedWrapper>
     );
 }

@@ -7,18 +7,18 @@ export default function PageTwo() {
     <div className="flex">
       <div className="w-full mt-15 mb-20">
         <div className="flex flex-col justify-start items-start px-8 mb-20 lg:mt-32 lg:ml-30 md:mt-20 md:ml-5">
-          <AnimatedWrapper animation="fade-right" delay={100}>
+          <AnimatedWrapper animation="fade-up" delay={100}>
             <p className="text-xl font-mono text-black ">
               all the projects I have worked on
             </p>
           </AnimatedWrapper>
-          <AnimatedWrapper animation="fade-right" delay={100}>
+          <AnimatedWrapper animation="fade-up" delay={100}>
             <h1 className="text-3xl underline font-bold text-black ">
               My Works
             </h1>
           </AnimatedWrapper>
         </div>
-        <AnimatedWrapper animation="fade-right" delay={100}>
+        <AnimatedWrapper animation="fade-up" delay={100}>
           <div className="flex justify-center px-8 lg:mr-10 md:ml-5 ">
             <CategoryWorks></CategoryWorks>
           </div>

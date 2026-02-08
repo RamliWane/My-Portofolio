@@ -7,7 +7,6 @@ import AnimatedWrapper from "../Components/AnimatedWrapper";
 
 export default function FirstPage() {
   const scrollToNextSection = () => {
-    // Scroll to next section - adjust the scroll distance as needed
     window.scrollTo({
       top: window.innerHeight,
       behavior: 'smooth'
