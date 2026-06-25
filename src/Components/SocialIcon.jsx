@@ -2,9 +2,9 @@ import React from "react";
 
 export default function SocialIcon() {
   return (
-    <div className="flex space-x-4 mt-5">
+    <div className="flex space-x-4">
         <div className="flex flex-col justify-start">
-            <h1 className="text-2xl font-bold text-black mt-5">Contact me</h1>
+            <h1 className="text-2xl font-bold text-[#FAB12F] underline mt-5"><i>Contact Me</i></h1>
             <div className="flex gap-3 mt-5">
                 <div className="flex bg-[#F0F0F0] w-13 shadow-2xl h-13 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-2">
                     <a href="https://github.com/RamliWane" className="flex ml-3 justify-center items-center text-gray-700 hover:text-purple-700 transition">
@@ -14,7 +14,7 @@ export default function SocialIcon() {
                 <div className="flex bg-[#F0F0F0] shadow-2xl w-13 h-13 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-2">
                     <a href="https://www.instagram.com/wanee27_/" className="flex ml-3 justify-center items-center text-gray-700 hover:text-purple-700 transition">
                         <img src="./instagram.png" alt="Instagram" className="w-7 h-7" />
-                    </a>
+                    </a>    
                 </div>
                 <div className="flex bg-[#F0F0F0] shadow-2xl w-13 h-13 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-2">
                     <a href="#" className="flex ml-2 justify-center items-center text-gray-700 hover:text-purple-700 transition">

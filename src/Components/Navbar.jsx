@@ -26,20 +26,20 @@ export default function Navbar() {
         rounded-xl px-8 py-3 flex items-center justify-between max-w-4xl w-full transition-all duration-300 ease-in-out
         ${
           isScrolled
-            ? "bg-white/20 backdrop-blur-md shadow-xl border border-white/20" // Transparan dengan blur
-            : "bg-white shadow-lg" // Background putih solid
+            ? "bg-[#2B5136]/60 backdrop-blur-md shadow-xl border border-white/20" // Transparan dengan blur
+            : "bg-[#2B5136] shadow-lg" // Background putih solid
         }
       `}>
         <h1 className={`text-xl font-bold ml-3 transition-colors duration-300 ${
-          isScrolled ? "text-black drop-shadow-lg" : "text-gray-800"
+          isScrolled ? "text-white drop-shadow-lg" : "text-white"
         }`}>Ramli</h1>
 
-        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-8 font-medium">
           <li>
             <Link href="#home" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
-                ? "text-black hover:text-amber-300 drop-shadow-lg" 
-                : "text-gray-700 hover:text-amber-900"
+                ? "text-white hover:text-[#FAB12F] drop-shadow-lg" 
+                : "text-white hover:text-amber-900"
             }`}>
               Home
             </Link>
@@ -47,8 +47,8 @@ export default function Navbar() {
           <li>
             <Link href="#about" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
-                ? "text-black hover:text-amber-300 drop-shadow-lg" 
-                : "text-gray-700 hover:text-amber-900"
+                ? "text-white hover:text-[#FAB12F]drop-shadow-lg" 
+                : "text-white hover:text-amber-900"
             }`}>
               About
             </Link>
@@ -56,8 +56,8 @@ export default function Navbar() {
           <li>
             <Link href="#portofolio" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
-                ? "text-black hover:text-amber-300 drop-shadow-lg" 
-                : "text-gray-700 hover:text-amber-900"
+                ? "text-white hover:text-[#FAB12F] drop-shadow-lg" 
+                : "text-white hover:text-amber-900"
             }`}>
               Portofolio
             </Link>
@@ -65,8 +65,8 @@ export default function Navbar() {
           <li>
             <Link href="#footer" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
-                ? "text-black hover:text-amber-300 drop-shadow-lg" 
-                : "text-gray-700 hover:text-amber-900"
+                ? "text-white hover:text-[#FAB12F] drop-shadow-lg" 
+                : "text-white hover:text-amber-900"
             }`}>
               Contact
             </Link>

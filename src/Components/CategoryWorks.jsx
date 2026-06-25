@@ -2,125 +2,57 @@ import React from "react";
 
 export default function CategoryWorks() {
   return (
-    <div className="flex flex-wrap justify-center">
-      <div className="flex justify-center flex-wrap gap-8">
-        <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group">
-          <div className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        {
+          icon: "./figma_icon.png",
+          alt: "Figma",
+          deco: "./01.png",
+          title: "UI / UX Design",
+        },
+        {
+          icon: "./software.png",
+          alt: "Website",
+          deco: "./02.png",
+          title: "Website",
+        },
+        {
+          icon: "./mobile-app.png",
+          alt: "Mobile",
+          deco: "./03.png",
+          title: "Mobile Apps",
+        },
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="relative bg-[#F0F0F0] rounded-2xl overflow-hidden cursor-pointer h-56 flex flex-col justify-end p-6 group"
+        >
+         <div className="absolute inset-0 bg-[#2B5136] -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
 
-          <div className="absolute mb-25 opacity-40 mr-5 inset-0 flex items-end justify-end">
-            <img className="w-25 h-20" src="./01.png" alt="" />
+          <div className="absolute bottom-4 right-4 opacity-15 pointer-events-none">
+            <img src={item.deco} alt="" className="w-20 h-16 object-contain" />
           </div>
 
-          <div className="flex bg-[#000000] w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center">
-            <svg
-              className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M7 17L17 7M17 7H7M17 7V17"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
+          <div className="relative z-10 flex flex-col gap-1.5">
+            <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center mb-1">
+              <img
+                src={item.icon}
+                alt={item.alt}
+                className="w-6 h-6 object-contain transition-[filter] duration-300"
               />
-            </svg>
-          </div>
-
-          <div className="flex flex-col ml-7 mt-13 relative z-10">
-            <img
-              className="w-12 h-12 -ml-3 transition duration-300 group-hover:invert"
-              src="./gg_figma.png"
-              alt="Figma"
-            />
-            <h1 className="text-2xl font-bold text-black group-hover:text-white transition-colors duration-300">
-              UI / UX Design
-            </h1>
-            <p className="text-[15px] font-mono text-black group-hover:text-white transition-colors duration-300">
-              Look All My UI / UX Design
+            </div>
+            <h3 className="text-base font-bold text-black group-hover:text-[#FAB12F] transition-colors duration-300">
+              {item.title}
+            </h3>
+            <p className="text-sm font-mono text-black/70 group-hover:text-white transition-colors duration-300 leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, temporibus...
+            </p>
+            <p className="text-sm font-bold text-[#2B5136] group-hover:text-white transition-colors duration-300 mt-1">
+              Learn More <span className="text-[#FAB12F] text-base pl-1">→</span>
             </p>
           </div>
         </div>
-
-        <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group">
-          <div className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
-
-          <div className="absolute mb-25 opacity-40 mr-5 inset-0 flex items-end justify-end">
-            <img className="w-25 h-20" src="./02.png" alt="" />
-          </div>
-
-          <div className="flex bg-[#000000] w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center">
-            <svg
-              className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M7 17L17 7M17 7H7M17 7V17"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-            </svg>
-          </div>
-
-          <div className="flex flex-col ml-7 mt-13 relative z-10">
-            <img
-              className="w-10 h-10 -ml-3 transition duration-300 group-hover:invert"
-              src="./WebsiteIcon.png"
-              alt="Website"
-            />
-            <h1 className="text-2xl font-bold text-black mt-1 group-hover:text-white transition-colors duration-300">
-              Website
-            </h1>
-            <p className="text-[15px] font-mono text-black group-hover:text-white transition-colors duration-300">
-              Look All My Website Projects
-            </p>
-          </div>
-        </div>
-
-        <div className="flex bg-[#F0F0F0] w-90 shadow-2xl h-50 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-90 relative overflow-hidden group">
-          <div className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-xl"></div>
-
-          <div className="absolute mb-25 opacity-40 mr-5 inset-0 flex items-end justify-end">
-            <img className="w-25 h-20" src="./03.png" alt="" />
-          </div>
-
-          <div className="flex bg-[#000000] w-13 shadow-2xl h-13 rounded-xl cursor-pointer relative z-10 group-hover:bg-white transition-colors duration-300 items-center justify-center">
-            <svg
-              className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M7 17L17 7M17 7H7M17 7V17"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-            </svg>
-          </div>
-
-          <div className="flex flex-col ml-7 mt-13 relative z-10">
-            <img
-              className="w-11 h-11 -ml-3 transition duration-300 group-hover:invert"
-              src="./mobile-app.png"
-              alt="Mobile"
-            />
-            <h1 className="text-2xl font-bold text-black group-hover:text-white transition-colors duration-300">
-              Mobile Apps
-            </h1>
-            <p className="text-[15px] font-mono text-black group-hover:text-white transition-colors duration-300">
-              Look All My Mobile Apps Project
-            </p>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

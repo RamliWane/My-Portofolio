@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={kanit.variable}>
-      <body className="bg-gray-50 text-gray-900 gradient-bg">
+      <body >
         <div className="mt-7">
           <Navbar></Navbar>
         </div>

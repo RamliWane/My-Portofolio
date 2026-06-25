@@ -5,24 +5,28 @@ import AnimatedWrapper from "@/Components/AnimatedWrapper";
 export default function PageTwo() {
   return (
     <div className="flex">
-      <div className="w-full mt-15 mb-20">
-        <div className="flex flex-col justify-start items-start px-8 mb-20 lg:mt-32 lg:ml-30 md:mt-20 md:ml-5">
-          <AnimatedWrapper animation="fade-up" delay={100}>
-            <p className="text-xl font-mono text-black ">
-              all the projects I have worked on
-            </p>
-          </AnimatedWrapper>
-          <AnimatedWrapper animation="fade-up" delay={100}>
-            <h1 className="text-3xl underline font-bold text-black ">
-              My Works
-            </h1>
-          </AnimatedWrapper>
-        </div>
-        <AnimatedWrapper animation="fade-up" delay={100}>
-          <div className="flex justify-center px-8 lg:mr-10 md:ml-5 ">
-            <CategoryWorks></CategoryWorks>
+      <div className="w-full mb-20">
+        <div className="px-8 lg:px-30 mb-10 flex justify-between items-end">
+          <div className="flex flex-col gap-2">
+              <p className="text-xl font-mono text-black">
+                <i className="text-[#FAB12F]">--</i> Services
+              </p>
+              <h1 className="text-3xl font-bold text-black">
+                <i className="text-[#FAB12F] underline">Services</i> I Provide
+              </h1>
           </div>
-        </AnimatedWrapper>
+          <button className="flex items-center bg-[#FAB12F] rounded-full h-11 p-1 gap-2 cursor-pointer transition-all duration-300 hover:-translate-y-2">
+            <span className="bg-[#2B5136] text-white font-semibold rounded-full px-5 py-2">
+              View My Portofolio
+            </span>
+            <div className="bg-white rounded-full w-9 h-9 flex items-center justify-center text-black font-bold text-lg">
+              →
+            </div>
+          </button>
+        </div>
+          <div className="px-8 lg:px-30">
+            <CategoryWorks />
+          </div>
       </div>
     </div>
   );

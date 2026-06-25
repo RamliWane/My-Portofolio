@@ -1,42 +1,39 @@
-//page tempat memanggil component category button dan portofolio web
-
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import PortofolioWeb from "@/Components/PortofolioWeb";
 import CategoryButton from "@/Components/CategoryButton";
 import AnimatedWrapper from "@/Components/AnimatedWrapper";
-import { useState } from "react";
 
 export default function PageFour() {
-        const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-    // Function untuk handle perubahan category
-    const handleCategoryChange = (category) => {
-        setSelectedCategory(category);
-        console.log('Category selected:', category);
-    };
-    return (
-        <>
-                <div id="portofolio">
-                    <div className="flex flex-col lg:ml-30 items-start mb-5 justify-start px-8 md:mt-10 md:ml-5">
-                        <p className="text-xl font-mono text-black">
-                            all the projects I have worked on
-                        </p>
-                        <h1 className="text-3xl underline font-bold text-black">
-                            Portofolio
-                        </h1>
-                    </div>
-                    <div className="flex lg:ml-35 justify-start">
-                        <CategoryButton onCategoryChange={handleCategoryChange} />
-                    </div>
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
 
-                    <div className={`flex justify-center gap-5 mb-10 flex-wrap`}>
-                       <PortofolioWeb selectedCategory={selectedCategory} />
-                    </div>
-                    <div className="flex justify-center items-center">
-                        <img className="w-330 h-5" src="./line.png" alt="" />
-                    </div>
-                </div>
-        </>
-    );
+  return (
+    <div id="portofolio" className="bg-[#f3f3f3]">
+      <div className="px-8 lg:px-30 pt-20 flex justify-between items-end">
+        <div className="flex flex-col gap-2">
+          <p className="text-xl font-mono text-black">
+            <i className="text-[#FAB12F]">--</i> My Portofolio
+          </p>
+          <h1 className="text-3xl font-bold text-black">
+             My Latest  <i className="text-[#FAB12F] underline">Projects</i>
+          </h1>
+        </div>
+        <button className="flex items-center bg-[#FAB12F] rounded-full h-11 p-1 gap-2 cursor-pointer transition-all duration-300 hover:-translate-y-2">
+          <span className="bg-[#2B5136] text-white font-semibold rounded-full px-5 py-2">
+            See In Repo
+          </span>
+          <div className="bg-white rounded-full w-9 h-9 flex items-center justify-center text-black font-bold text-lg">
+            →
+          </div>
+        </button>
+      </div>
+      <div className="flex justify-center gap-5 mb-10 flex-wrap px-8 lg:px-20">
+        <PortofolioWeb selectedCategory={selectedCategory} />
+      </div>
+    </div>
+  );
 }
