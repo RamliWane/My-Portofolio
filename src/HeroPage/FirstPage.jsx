@@ -13,16 +13,8 @@ export default function FirstPage() {
   };
 
   return (
-    <div className="flex justify-center flex-wrap mt-10 lg:mt-30 relative">
-        <div className="flex justify-center mb-10 z-1">
-          <img
-            className="w-80 h-auto md:w-100 lg:w-120"
-            src="./image-first-page.png"
-            alt="globe"
-          />
-        </div>
-
-      <div className="flex self-start ml-10 items-start flex-wrap lg:ml-30 flex-col gap-4">
+    <div className="flex justify-between items-center flex-wrap mt-10 lg:mt-30 relative px-8 lg:px-30 pb-24">
+      <div className="flex self-start items-start flex-wrap flex-col gap-4 order-2 lg:order-1">
           <h3 className="text-2xl font-bold text-black">
             Welcome to Portofolio
           </h3>
@@ -51,8 +43,15 @@ export default function FirstPage() {
           </div>
       </div>
 
+      <div className="flex justify-center items-center mb-10 order-1 lg:order-2 w-full lg:w-auto">
+        <img
+          className="w-90 h-auto md:w-100 lg:w-120 max-w-full"
+          src="./image-first-page.png"
+          alt="globe"
+        />
+      </div>
 
-      <div className="absolute -bottom-18  left-1/2 transform -translate-x-1/2">
+      <div className="absolute -bottom-8  left-1/2 transform -translate-x-1/2">
         <div
           className="flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 group"
           onClick={scrollToNextSection}

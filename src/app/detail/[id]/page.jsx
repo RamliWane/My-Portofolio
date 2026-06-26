@@ -110,9 +110,6 @@ export default function Detail( ) {
                             alt="Project Detail"
                         />
                     </div>
-                    <div className="flex justify-center pt-5 items-center">
-                        <img className="w-330 h-5" src="../line.png" alt="" />
-                    </div>
                 </div>
 
                 <footer className="max-w-6xl mx-auto pt-12 pb-8 border-t lg:ml-55 border-gray-200">

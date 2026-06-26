@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <div className="mt-7">
           <Navbar></Navbar>
         </div>
-        <main className="container mx-auto">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
