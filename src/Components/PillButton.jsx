@@ -3,7 +3,7 @@ import React from "react";
 export default function PillButton({ label, onClick, href, className = "" }) {
   const content = (
     <>
-      <span className="bg-[#2B5136] text-white font-semibold rounded-full px-5 py-3 transition-colors duration-300">
+      <span className="bg-[#2B5136] text-white font-semibold rounded-full px-5 py-2 transition-colors duration-300">
         {label}
       </span>
       <span className="bg-white rounded-full w-9 h-9 flex items-center justify-center text-black font-bold text-lg transition-transform duration-300 group-hover:translate-x-0.5">
