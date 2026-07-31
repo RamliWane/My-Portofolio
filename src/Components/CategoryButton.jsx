@@ -1,36 +1,25 @@
-//component category button
-
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-const Radio = ({onCategoryChange}) => {
-    const [selectedCategory, setSelectedCategory] = useState('All')
+const CATEGORIES = ['All', 'Website', 'Mobile', 'UI/UX'];
 
-    const handleCategory = (category) => {
-        setSelectedCategory(category);
-    }
-
+const CategoryButton = ({ selectedCategory = 'All', onCategoryChange }) => {
   return (
     <StyledWrapper>
       <div className="radio-inputs">
-        <label className="radio">
-          <input defaultChecked name="radio" type="radio" onChange={() => handleCategory('All')} />
-          <span className="name">All</span>
-        </label>
-        <label className="radio">
-          <input name="radio" type="radio" onChange={() => handleCategory('Website')} />
-          <span className="name">Website</span>
-        </label>
-        <label className="radio">
-          <input name="radio" type="radio" onChange={() => handleCategory('Mobile')} />
-          <span className="name">Mobile</span>
-        </label>
-        <label className="radio">
-          <input name="radio" type="radio" onChange={() => handleCategory('UI/UX')} />
-          <span className="name">UI/UX</span>
-        </label>
+        {CATEGORIES.map((category) => (
+          <label className="radio" key={category}>
+            <input
+              type="radio"
+              name="category"
+              checked={selectedCategory === category}
+              onChange={() => onCategoryChange && onCategoryChange(category)}
+            />
+            <span className="name">{category}</span>
+          </label>
+        ))}
       </div>
     </StyledWrapper>
   );
@@ -83,18 +72,17 @@ const StyledWrapper = styled.div`
   }
 
   .radio-inputs .radio input:checked + .name {
-    background: linear-gradient(145deg,  #99E5B5);
-    color: white;
+    background: linear-gradient(145deg, #99E5B5, #6FCF8F);
+    color: #2B5136;
     font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
     box-shadow:
       inset 2px 2px 5px rgba(0, 0, 0, 0.2),
       inset -2px -2px 5px rgba(255, 255, 255, 0.1),
-      3px 3px 8px rgba(59, 130, 246, 0.3);
+      3px 3px 8px rgba(43, 81, 54, 0.35);
     transform: translateY(2px);
   }
 
-  /* Hover effect */
   .radio-inputs .radio:hover .name {
     background: linear-gradient(145deg, #f0f0f0, #ffffff);
     transform: translateY(-1px);
@@ -107,12 +95,10 @@ const StyledWrapper = styled.div`
     transform: translateY(1px);
   }
 
-  /* Animation */
   .radio-inputs .radio input:checked + .name {
     animation: select 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Particles */
   .radio-inputs .radio .name::before,
   .radio-inputs .radio .name::after {
     content: "";
@@ -130,59 +116,34 @@ const StyledWrapper = styled.div`
   }
 
   .radio-inputs .radio .name::before {
-    background: #60a5fa;
-    box-shadow: 0 0 6px #60a5fa;
+    background: #FAB12F;
+    box-shadow: 0 0 6px #FAB12F;
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .radio-inputs .radio .name::after {
-    background: #93c5fd;
-    box-shadow: 0 0 8px #93c5fd;
+    background: #99E5B5;
+    box-shadow: 0 0 8px #99E5B5;
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  /* Sparkles */
-  .radio-inputs .radio .name::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: radial-gradient(
-      circle at var(--x, 50%) var(--y, 50%),
-      rgba(59, 130, 246, 0.3) 0%,
-      transparent 50%
-    );
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .radio-inputs .radio input:checked + .name::after {
-    opacity: 1;
-    animation: sparkle-bg 1s ease-out forwards;
-  }
-
-  /* Multiple particles */
-  .radio-inputs .radio input:checked + .name {
-    overflow: visible;
-  }
-
   .radio-inputs .radio input:checked + .name::before {
     box-shadow:
-      0 0 6px #60a5fa,
-      10px -10px 0 #60a5fa,
-      -10px -10px 0 #60a5fa;
+      0 0 6px #FAB12F,
+      10px -10px 0 #FAB12F,
+      -10px -10px 0 #FAB12F;
     animation: multi-particles-top 0.8s ease-out forwards;
   }
 
   .radio-inputs .radio input:checked + .name::after {
     box-shadow:
-      0 0 8px #93c5fd,
-      10px 10px 0 #93c5fd,
-      -10px 10px 0 #93c5fd;
+      0 0 8px #99E5B5,
+      10px 10px 0 #99E5B5,
+      -10px 10px 0 #99E5B5;
     animation: multi-particles-bottom 0.8s ease-out forwards;
   }
 
@@ -234,21 +195,6 @@ const StyledWrapper = styled.div`
     }
   }
 
-  @keyframes sparkle-bg {
-    0% {
-      opacity: 0;
-      transform: scale(0.2);
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: scale(2);
-    }
-  }
-
-  /* Ripple effect */
   .radio-inputs .radio .name::before {
     content: "";
     position: absolute;
@@ -281,7 +227,6 @@ const StyledWrapper = styled.div`
     }
   }
 
-  /* Glowing border */
   .radio-inputs .radio input:checked + .name {
     position: relative;
   }
@@ -293,8 +238,8 @@ const StyledWrapper = styled.div`
     border-radius: inherit;
     background: linear-gradient(
       45deg,
-      rgba(59, 130, 246, 0.5),
-      rgba(37, 99, 235, 0.5)
+      rgba(250, 177, 47, 0.5),
+      rgba(153, 229, 181, 0.5)
     );
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
@@ -313,4 +258,4 @@ const StyledWrapper = styled.div`
     }
   }`;
 
-export default Radio;
+export default CategoryButton;

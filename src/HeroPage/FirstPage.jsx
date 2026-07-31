@@ -2,99 +2,108 @@
 
 import React from "react";
 import SocialIcon from "../Components/SocialIcon";
-import Button from "../Components/Button";
+import PillButton from "@/Components/PillButton";
+
+
+const FLOATING_SKILLS = [
+  { name: "React Js", icon: "./react-icon.webp" },
+  { name: "Express", icon: "./express-2.png" },
+  { name: "MySQL", icon: "./mysql-2.png" },
+];
 
 export default function FirstPage() {
-  const scrollToNextSection = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth'
-    });
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div className="flex justify-between items-center flex-wrap mt-10 lg:mt-30 relative px-8 lg:px-30 pb-24">
-      <div className="flex self-start items-start flex-wrap flex-col gap-4 order-2 lg:order-1">
-          <h3 className="text-2xl font-bold text-black">
-            Welcome to Portofolio
-          </h3>
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#2B5136_1px,transparent_1px),linear-gradient(to_bottom,#2B5136_1px,transparent_1px)] bg-[size:48px_48px] opacity-[0.05] pointer-events-none" />
+      <div className="absolute top-24 -right-32 w-96 h-96 rounded-full bg-[#99E5B5]/30 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 -left-24 w-80 h-80 rounded-full bg-[#FAB12F]/20 blur-3xl pointer-events-none" />
 
-          <h1 className="text-4xl font-bold text-black">
-            Hi, I'm{" "}
-            <span className="text-[#FAB12F] underline">
-            <i> Ramli Silawane</i>
-            </span>
-             <br />
-            A Beginner Coder.
-          </h1>
+      <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-32 pb-28 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col gap-5">
+          
+          <div>
+            <h3 className="text-xl font-mono text-black/70 mb-2">
+              <i className="text-[#FAB12F]">--</i> Welcome to my portfolio
+            </h3>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight">
+              Hi, I&apos;m{" "}
+              <span className="text-[#FAB12F] underline decoration-[#FAB12F]">
+                <i>Ramli Silawane</i>
+              </span>
+            </h1>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-[#2B5136] mt-2">
+              A Beginner Coder.
+            </h2>
+          </div>
 
-          <p className="text-black text-[18px] font-mono">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
-            Ut enim ad minim veniam
+          <p className="text-black/80 text-[17px] font-mono leading-relaxed max-w-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
           </p>
 
-          <div className="self-start mt-1">
-            <Button />
+          <div className="flex flex-wrap gap-4 items-center">
+            <PillButton
+              label="Explore My Work"
+              onClick={() => scrollToSection("portofolio")}
+            />
+
           </div>
 
-          <div className="mb-5">
+          <div className="mt-1">
             <SocialIcon />
           </div>
-      </div>
+        </div>
 
-      <div className="flex justify-center items-center mb-10 order-1 lg:order-2 w-full lg:w-auto">
-        <img
-          className="w-90 h-auto md:w-100 lg:w-120 max-w-full"
-          src="./image-first-page.png"
-          alt="globe"
-        />
-      </div>
+        <div className="relative flex justify-center">
+          <img
+            src="./image-first-page.png"
+            alt="globe illustration"
+            className="relative w-72 sm:w-80 lg:w-120 h-auto drop-shadow-2xl"
+          />
 
-      <div className="absolute -bottom-8  left-1/2 transform -translate-x-1/2">
-        <div
-          className="flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 group"
-          onClick={scrollToNextSection}
-        >
-          <h3 className="text-lg hidden lg:flex md:flex font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors duration-300">
-            Scroll Down
-          </h3>
-
-          <div className="hidden lg:flex md:flex flex-col items-center">
-            <div className="animate-bounce">
-              <svg
-                className="w-5 h-5 text-black mb-1 group-hover:text-gray-700 transition-colors duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+          {FLOATING_SKILLS.map((skill, index) => {
+            const positions = [
+              "top-4 -left-4 animate-[float_5s_ease-in-out_infinite]",
+              "top-1/2 -right-6 animate-[float_6s_ease-in-out_0.8s_infinite]",
+              "bottom-10 -left-4 animate-[float_5.5s_ease-in-out_1.5s_infinite]",
+            ];
+            return (
+              <div
+                key={skill.name}
+                className={`absolute ${positions[index]} hidden sm:flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-xl border border-black/5`}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
+                <img
+                  src={skill.icon}
+                  alt=""
+                  className="w-5 h-5 object-contain"
                 />
-              </svg>
-            </div>
-
-            <div className="animate-bounce" style={{ animationDelay: '0.2s' }}>
-              <svg
-                className="w-4 h-4 text-black opacity-60 group-hover:text-gray-700 transition-colors duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
-          </div>
+                <span className="text-sm font-semibold text-black">
+                  {skill.name}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </div>
+
+      <button
+        onClick={() => scrollToSection("services")}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-black/60 hover:text-black transition-colors"
+        aria-label="Scroll down"
+      >
+        <span className="text-sm font-medium">Scroll Down</span>
+        <span className="flex w-6 h-9 rounded-full border-2 border-current justify-center pt-1.5">
+          <span className="w-1 h-2 rounded-full bg-current animate-bounce" />
+        </span>
+      </button>
+    </section>
   );
 }

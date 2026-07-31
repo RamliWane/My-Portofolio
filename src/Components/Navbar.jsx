@@ -9,28 +9,27 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50); // Mulai efek setelah scroll 50px
+      setIsScrolled(scrollTop > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     
-    // Cleanup function untuk menghapus event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <nav className="w-full flex justify-center -mt-8 md:-mt-5 fixed z-50">
+    <nav className="w-full flex justify-center mt-2 fixed z-50">
       <div className={`
         rounded-xl px-8 py-3 flex items-center justify-between max-w-4xl w-full transition-all duration-300 ease-in-out
         ${
           isScrolled
-            ? "bg-[#2B5136]/60 backdrop-blur-md shadow-xl border border-white/20" // Transparan dengan blur
-            : "bg-[#2B5136] shadow-lg" // Background putih solid
+            ? "bg-[#2B5136]/60 backdrop-blur-md shadow-xl border border-white/20"
+            : "bg-[#2B5136] shadow-lg" 
         }
       `}>
-        <h1 className={`text-xl font-bold ml-3 transition-colors duration-300 ${
+        <h1 className={`text-xl font-bold ml-3 cursor-pointer transition-colors duration-300 ${
           isScrolled ? "text-white drop-shadow-lg" : "text-white"
         }`}>Ramli</h1>
 
@@ -39,7 +38,7 @@ export default function Navbar() {
             <Link href="#home" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
                 ? "text-white hover:text-[#FAB12F] drop-shadow-lg" 
-                : "text-white hover:text-amber-900"
+                : "text-white hover:text-[#FAB12F]"
             }`}>
               Home
             </Link>
@@ -48,7 +47,7 @@ export default function Navbar() {
             <Link href="#about" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
                 ? "text-white hover:text-[#FAB12F]drop-shadow-lg" 
-                : "text-white hover:text-amber-900"
+                : "text-white hover:text-[#FAB12F]"
             }`}>
               About
             </Link>
@@ -57,7 +56,7 @@ export default function Navbar() {
             <Link href="#portofolio" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
                 ? "text-white hover:text-[#FAB12F] drop-shadow-lg" 
-                : "text-white hover:text-amber-900"
+                : "text-white hover:text-[#FAB12F]"
             }`}>
               Portofolio
             </Link>
@@ -66,7 +65,7 @@ export default function Navbar() {
             <Link href="#footer" className={`transition-colors duration-300 font-semibold ${
               isScrolled 
                 ? "text-white hover:text-[#FAB12F] drop-shadow-lg" 
-                : "text-white hover:text-amber-900"
+                : "text-white hover:text-[#FAB12F]"
             }`}>
               Contact
             </Link>

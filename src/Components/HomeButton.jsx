@@ -1,12 +1,13 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const Button = () => {
   return (
     <StyledWrapper>
-        <a href="/">  
+        <Link href="/">  
             <div data-tooltip="Home" className="button">
                 <div className="button-wrapper">
                 <div className="text">Go Back</div>
@@ -17,7 +18,7 @@ const Button = () => {
                 </span>
                 </div>
             </div>
-        </a>
+        </Link>
     </StyledWrapper>
   );
 }

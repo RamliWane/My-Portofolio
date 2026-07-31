@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://googleapis.com');
 
 :root {
   --background: #ffffff;
@@ -10,25 +9,98 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-kanit);
-  --font-kanit: var(--font-kanit); /* Tambah ini untuk class font-kanit */
+  --font-kanit: var(--font-kanit);
   --font-geist: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-padding-top: 96px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background: #f6f6f6f6;
+  background: #f6f6f6;
   color: var(--foreground);
   font-family: var(--font-kanit), system-ui, 'Poppins', sans-serif;
 }
-/* styles/globals.css */
-.gradient-bg {
-  background: linear-gradient(to bottom right, #99E5B5, #ffffff);
-  min-height: 100vh;
+
+::selection {
+  background: #FAB12F;
+  color: #2B5136;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2B5136;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #457476;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-fade {
+  animation: page-fade 0.7s ease-out both;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+:focus-visible {
+  outline: 2px solid #FAB12F;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

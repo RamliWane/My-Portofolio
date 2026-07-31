@@ -1,28 +1,42 @@
 import React from "react";
 
-export default function SocialIcon() {
+const SOCIALS = [
+  {
+    href: "https://github.com/RamliWane",
+    icon: "./github.png",
+    alt: "GitHub",
+  },
+  {
+    href: "https://www.instagram.com/wanee27_/",
+    icon: "./instagram.png",
+    alt: "Instagram",
+  },
+  {
+    href: "mailto:ramlisilawane865@gmail.com",
+    icon: "./email.png",
+    alt: "Email",
+  },
+];
+
+export default function SocialIcon({ className = "" }) {
   return (
-    <div className="flex space-x-4">
-        <div className="flex flex-col justify-start">
-            <h1 className="text-2xl font-bold text-[#FAB12F] underline mt-5"><i>Contact Me</i></h1>
-            <div className="flex gap-3 mt-5">
-                <div className="flex bg-[#F0F0F0] w-13 shadow-2xl h-13 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-2">
-                    <a href="https://github.com/RamliWane" className="flex ml-3 justify-center items-center text-gray-700 hover:text-purple-700 transition">
-                        <img src="./github.png" alt="GitHub" className="w-7 h-7" />
-                    </a>
-                </div>
-                <div className="flex bg-[#F0F0F0] shadow-2xl w-13 h-13 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-2">
-                    <a href="https://www.instagram.com/wanee27_/" className="flex ml-3 justify-center items-center text-gray-700 hover:text-purple-700 transition">
-                        <img src="./instagram.png" alt="Instagram" className="w-7 h-7" />
-                    </a>    
-                </div>
-                <div className="flex bg-[#F0F0F0] shadow-2xl w-13 h-13 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-2">
-                    <a href="#" className="flex ml-2 justify-center items-center text-gray-700 hover:text-purple-700 transition">
-                        <img src="./email.png" alt="email" className="w-8 h-8" />
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div className={`flex items-center gap-3 ${className}`}>
+      {SOCIALS.map((social) => (
+        <a
+          key={social.alt}
+          href={social.href}
+          target={social.href.startsWith("http") ? "_blank" : undefined}
+          rel="noreferrer"
+          aria-label={social.alt}
+          className="group flex items-center justify-center bg-white w-12 h-12 rounded-xl shadow-md border border-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#FAB12F]/40"
+        >
+          <img
+            src={social.icon}
+            alt={social.alt}
+            className="w-6 h-6 object-contain transition-transform duration-300 group-hover:scale-110"
+          />
+        </a>
+      ))}
     </div>
   );
 }
