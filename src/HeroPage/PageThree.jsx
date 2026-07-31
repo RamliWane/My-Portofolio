@@ -31,7 +31,7 @@ export default function PageThree() {
                     src="./aboutme-image.png"
                     alt="Ilustrasi Ramli Silawane"
                   />
-                 
+
                 </div>
               </div>
 
@@ -41,9 +41,10 @@ export default function PageThree() {
                 </p>
 
                 <h2 className="text-3xl lg:text-4xl font-bold text-white leading-snug">
-                  Kode pertama saya memang{" "}
+                  
+                  I am always open to {" "}
                   <i className="text-[#FAB12F] underline decoration-[#FAB12F]">
-                    berantakan
+                    Projects
                   </i>
 
                   .
@@ -68,13 +69,13 @@ export default function PageThree() {
                 </div>
 
 
-                 <div className="flex flex-wrap gap-4 items-center">
-                            <PillButton
-                              label="Explore My Work"
-                              onClick={() => scrollToSection("portofolio")}
-                            />
-                
-                          </div>
+                <div className="flex flex-wrap gap-4 items-center">
+                  <PillButton
+                    label="Explore My Work"
+                    onClick={() => scrollToSection("portofolio")}
+                  />
+
+                </div>
               </div>
             </div>
           </div>
